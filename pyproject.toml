@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "solar-design-agent"
+version = "0.1.0"
+description = "Physics-based photovoltaic array design optimization prototype"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.0",
+  "scipy>=1.11",
+  "pvlib>=0.10",
+  "pymoo>=0.6",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+streamlit = ["streamlit>=1.40"]
+
+[project.scripts]
+solar-optimize = "solar_design_agent.cli:main"
+bracket-optimize = "solar_design_agent.bracket_cli:main"
+thermo-bracket-optimize = "solar_design_agent.thermo_cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,40 @@
+{
+  "constraints": {
+    "mechanical": {
+      "load_n": 1000.0,
+      "max_deflection_mm": 2.0,
+      "yield_strength_pa": 150000000.0,
+      "youngs_modulus_pa": 69000000000.0,
+      "density_kg_m3": 2700.0,
+      "safety_factor": 2.0
+    },
+    "conductivity_w_mk": 205.0,
+    "convection_w_m2k": 12.0,
+    "ambient_temperature_c": 25.0,
+    "base_temperature_c": 100.0,
+    "heat_generation_w_m3": 100000.0,
+    "strength_temperature_coefficient_per_c": 0.001,
+    "thermal_nodes": 21
+  },
+  "best": {
+    "design": {
+      "width_m": 0.03,
+      "thickness_m": 0.02,
+      "length_m": 0.1
+    },
+    "metrics": {
+      "stress_mpa": 50.0,
+      "deflection_mm": 0.24154589371980675,
+      "mass_kg": 0.16199999999999998,
+      "safety_factor": 3.0,
+      "allowable_stress_mpa": 69.375,
+      "peak_temperature_c": 100.0,
+      "effective_yield_strength_mpa": 138.75,
+      "thermal_strength_factor": 0.925
+    },
+    "score": -0.16199999999999998
+  },
+  "feasible_count": 20,
+  "candidate_count": 135,
+  "disclaimer": "Thermomechanical first-order screening only; not structural certification."
+}

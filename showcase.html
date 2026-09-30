@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solar Design Agent | Engineering Optimization Showcase</title>
+  <style>
+    :root {
+      --ink: #17212b;
+      --muted: #61717e;
+      --paper: #f4f1e8;
+      --panel: #fffdf7;
+      --line: #d9d4c8;
+      --sun: #ef9b2d;
+      --teal: #197f78;
+      --teal-dark: #0d514f;
+      --red: #ad4c3d;
+      --shadow: 0 18px 45px rgba(23, 33, 43, .09);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: Georgia, 'Times New Roman', serif; }
+    .shell { max-width: 1180px; margin: 0 auto; padding: 30px 24px 70px; }
+    .masthead { display: flex; justify-content: space-between; gap: 24px; align-items: flex-start; padding: 20px 0 58px; }
+    .eyebrow { margin: 0 0 12px; color: var(--teal); font: 700 12px/1.2 'Segoe UI', sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+    h1 { max-width: 720px; margin: 0; font-size: clamp(42px, 7vw, 82px); line-height: .94; letter-spacing: -.04em; font-weight: 700; }
+    .dek { max-width: 560px; margin: 24px 0 0; color: var(--muted); font: 18px/1.5 'Segoe UI', sans-serif; }
+    .stamp { min-width: 170px; border-top: 3px solid var(--sun); padding-top: 10px; color: var(--muted); font: 12px/1.5 'Segoe UI', sans-serif; text-transform: uppercase; letter-spacing: .08em; }
+    .section { margin-top: 42px; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 16px; border-bottom: 1px solid var(--line); padding-bottom: 10px; }
+    h2 { margin: 0; font-size: 30px; letter-spacing: -.02em; }
+    .section-head p { margin: 0; color: var(--muted); font: 13px/1.4 'Segoe UI', sans-serif; }
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .metric, .panel { background: var(--panel); border: 1px solid var(--line); box-shadow: var(--shadow); }
+    .metric { min-height: 132px; padding: 18px; }
+    .metric strong { display: block; margin-top: 13px; color: var(--teal-dark); font-size: 30px; line-height: 1; }
+    .metric span { color: var(--muted); font: 12px/1.35 'Segoe UI', sans-serif; text-transform: uppercase; letter-spacing: .07em; }
+    .two { display: grid; grid-template-columns: 1.1fr .9fr; gap: 16px; }
+    .panel { padding: 24px; }
+    .panel h3 { margin: 0 0 18px; font-size: 21px; }
+    .rows { display: grid; gap: 11px; }
+    .row { display: flex; justify-content: space-between; gap: 15px; border-bottom: 1px dashed var(--line); padding-bottom: 9px; font: 14px/1.3 'Segoe UI', sans-serif; }
+    .row:last-child { border-bottom: 0; padding-bottom: 0; }
+    .row b { color: var(--teal-dark); font-weight: 700; text-align: right; }
+    .bar-group { display: grid; gap: 15px; margin-top: 8px; }
+    .bar-label { display: flex; justify-content: space-between; margin-bottom: 5px; font: 13px 'Segoe UI', sans-serif; }
+    .bar { height: 13px; overflow: hidden; background: #e7e2d8; }
+    .bar i { display: block; height: 100%; background: var(--teal); }
+    .bar i.sun { background: var(--sun); }
+    .pill { display: inline-block; padding: 5px 8px; color: var(--teal-dark); background: #dceee8; font: 700 11px 'Segoe UI', sans-serif; letter-spacing: .05em; text-transform: uppercase; }
+    .method-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+    .method { padding: 16px; min-height: 130px; border-top: 4px solid var(--line); background: rgba(255,253,247,.7); }
+    .method.active { border-color: var(--teal); }
+    .method h3 { margin: 0 0 9px; font-size: 17px; }
+    .method p { margin: 0; color: var(--muted); font: 12px/1.45 'Segoe UI', sans-serif; }
+    .callout { margin-top: 18px; padding: 17px 20px; border-left: 4px solid var(--sun); background: #fff8e7; font: 14px/1.55 'Segoe UI', sans-serif; }
+    .footer { display: flex; justify-content: space-between; gap: 20px; margin-top: 55px; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); font: 12px/1.5 'Segoe UI', sans-serif; }
+    a { color: var(--teal-dark); font-weight: 700; }
+    @media (max-width: 800px) { .masthead, .section-head, .footer { display: block; } .stamp { margin-top: 28px; } .grid, .method-grid, .two { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 520px) { .shell { padding: 20px 15px 45px; } .grid, .method-grid, .two { grid-template-columns: 1fr; } h1 { font-size: 48px; } }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <div>
+        <p class="eyebrow">Engineering optimization system / validated showcase</p>
+        <h1>From sunlight to a buildable decision.</h1>
+        <p class="dek">A physics-first design engine that searches constrained solar systems, checks manufactured parts, and explains the assumptions behind every recommendation.</p>
+      </div>
+      <div class="stamp">Solar Design Agent<br>Python 3.14<br>19 tests passed</div>
+    </header>
+
+    <section class="section">
+      <div class="section-head"><h2>The result</h2><p>PVGIS TMY weather / 8,760 hourly observations / Orlando-area site</p></div>
+      <div class="grid">
+        <article class="metric"><span>Weather-backed annual energy</span><strong>33,230 kWh</strong></article>
+        <article class="metric"><span>Capital cost estimate</span><strong>$26,810</strong></article>
+        <article class="metric"><span>25-year NPV</span><strong>$2,955</strong></article>
+        <article class="metric"><span>Levelized cost</span><strong>$0.091/kWh</strong></article>
+      </div>
+    </section>
+
+    <section class="section two">
+      <article class="panel">
+        <h3>Recommended solar design <span class="pill">feasible</span></h3>
+        <div class="rows">
+          <div class="row"><span>Tilt / azimuth</span><b>30 deg / 170 deg</b></div>
+          <div class="row"><span>Modules</span><b>50 x 2 m2 modules</b></div>
+          <div class="row"><span>Row spacing</span><b>2.0 m</b></div>
+          <div class="row"><span>Land area</span><b>181.8 m2 / 250 m2 limit</b></div>
+          <div class="row"><span>Simple payback</span><b>9.40 years</b></div>
+          <div class="row"><span>Weather source</span><b>PVGIS TMY, saved locally</b></div>
+        </div>
+      </article>
+      <article class="panel">
+        <h3>Why this design wins</h3>
+        <div class="bar-group">
+          <div><div class="bar-label"><span>Land used</span><b>72.7%</b></div><div class="bar"><i style="width:72.7%"></i></div></div>
+          <div><div class="bar-label"><span>Budget used</span><b>89.4%</b></div><div class="bar"><i class="sun" style="width:89.4%"></i></div></div>
+          <div><div class="bar-label"><span>Average shading loss</span><b>5.1%</b></div><div class="bar"><i style="width:5.1%"></i></div></div>
+        </div>
+        <div class="callout">The original 100-module baseline is not feasible under the $30,000 budget and 250 m2 land limit. The system labels that explicitly instead of claiming an invalid improvement.</div>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>One engine, two domains</h2><p>Same candidate / evaluate / feasibility / score contract</p></div>
+      <div class="two">
+        <article class="panel">
+          <h3>Thermomechanical bracket</h3>
+          <div class="rows">
+            <div class="row"><span>Design</span><b>30 x 20 x 100 mm</b></div>
+            <div class="row"><span>Mass</span><b>0.162 kg</b></div>
+            <div class="row"><span>Stress / allowable</span><b>50.0 / 69.4 MPa</b></div>
+            <div class="row"><span>Deflection</span><b>0.24 mm / 2.0 mm limit</b></div>
+            <div class="row"><span>Peak temperature</span><b>100.0 C</b></div>
+            <div class="row"><span>Thermal strength factor</span><b>0.925</b></div>
+          </div>
+        </article>
+        <article class="panel">
+          <h3>Physics stack</h3>
+          <div class="method-grid" style="grid-template-columns: repeat(2, 1fr)">
+            <div class="method active"><h3>Analytical</h3><p>Fast first-pass solar and beam equations.</p></div>
+            <div class="method active"><h3>FEM</h3><p>Euler-Bernoulli beam cross-check.</p></div>
+            <div class="method active"><h3>FDM</h3><p>Steady conduction and convection field.</p></div>
+            <div class="method"><h3>ML / PINN</h3><p>Deferred until validated simulation data is large enough.</p></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>How to run it</h2><p>All reports are reproducible from local inputs</p></div>
+      <article class="panel">
+        <div class="rows">
+          <div class="row"><span>Solar job</span><b><code>solar-optimize --config .\solar-job.json</code></b></div>
+          <div class="row"><span>Bracket job</span><b><code>bracket-optimize --load-n 1000 --report-json .\bracket-report.json</code></b></div>
+          <div class="row"><span>Thermal bracket</span><b><code>thermo-bracket-optimize --base-temperature-c 100</code></b></div>
+          <div class="row"><span>Source reports</span><b><a href="config-driven-report.json">solar JSON</a> / <a href="thermo-bracket-report.json">bracket JSON</a></b></div>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer"><span>Decision support, not certification.</span><span>Built with explicit assumptions, reproducible inputs, and testable physics.</span></footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,4 @@
+[console_scripts]
+bracket-optimize = solar_design_agent.bracket_cli:main
+solar-optimize = solar_design_agent.cli:main
+thermo-bracket-optimize = solar_design_agent.thermo_cli:main

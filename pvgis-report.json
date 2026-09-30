@@ -1,0 +1,102 @@
+{
+  "site": {
+    "latitude_deg": 28.6,
+    "days": 365,
+    "peak_irradiance_w_m2": 1000.0,
+    "longitude_deg": -81.4
+  },
+  "constraints": {
+    "max_land_area_m2": 250.0,
+    "max_budget_usd": 30000.0,
+    "electricity_price_usd_per_kwh": 0.1,
+    "module_cost_usd": 250.0,
+    "rack_cost_usd_per_m2": 120.0,
+    "inverter_cost_usd_per_kw": 110.0,
+    "modules_per_row": 10,
+    "objective": "value"
+  },
+  "weather_source": "PVGIS TMY",
+  "weather_samples": 8760,
+  "weather_result": {
+    "annual_energy_kwh": 30206.46832726393,
+    "average_shading_loss": 2.6645352591003756e-17,
+    "capacity_kw": 21.0,
+    "energy_density_kwh_m2": 302.0646832726393,
+    "weather_samples": 8760.0
+  },
+  "baseline": {
+    "design": {
+      "tilt_deg": 28.6,
+      "azimuth_deg": 180.0,
+      "row_spacing_m": 4.0,
+      "module_area_m2": 2.0,
+      "module_efficiency": 0.21,
+      "modules": 100,
+      "inverter_efficiency": 0.97,
+      "wiring_efficiency": 0.98
+    },
+    "result": {
+      "annual_energy_kwh": 120562.01222624833,
+      "average_shading_loss": 0.0,
+      "capacity_kw": 42.0,
+      "energy_density_kwh_m2": 602.8100611312417
+    },
+    "economics": {
+      "land_area_m2": 727.2727272727273,
+      "capital_cost_usd": 53620.0,
+      "annual_revenue_usd": 12056.201222624833,
+      "objective_value": 11520.001222624833
+    }
+  },
+  "best": {
+    "design": {
+      "tilt_deg": 60.0,
+      "azimuth_deg": 180.0,
+      "row_spacing_m": 2.0,
+      "module_area_m2": 2.0,
+      "module_efficiency": 0.21,
+      "modules": 50,
+      "inverter_efficiency": 0.97,
+      "wiring_efficiency": 0.98
+    },
+    "result": {
+      "annual_energy_kwh": 68504.70690589251,
+      "average_shading_loss": 2.6645352591004613e-17,
+      "capacity_kw": 21.0,
+      "energy_density_kwh_m2": 685.0470690589251
+    },
+    "economics": {
+      "land_area_m2": 181.8181818181818,
+      "capital_cost_usd": 26810.0,
+      "annual_revenue_usd": 6850.470690589252,
+      "objective_value": 6582.370690589251
+    }
+  },
+  "feasible_count": 133,
+  "pareto_frontier": [
+    {
+      "design": {
+        "tilt_deg": 60.0,
+        "azimuth_deg": 180.0,
+        "row_spacing_m": 2.0,
+        "module_area_m2": 2.0,
+        "module_efficiency": 0.21,
+        "modules": 50,
+        "inverter_efficiency": 0.97,
+        "wiring_efficiency": 0.98
+      },
+      "result": {
+        "annual_energy_kwh": 68504.70690589251,
+        "average_shading_loss": 2.6645352591004613e-17,
+        "capacity_kw": 21.0,
+        "energy_density_kwh_m2": 685.0470690589251
+      },
+      "economics": {
+        "land_area_m2": 181.8181818181818,
+        "capital_cost_usd": 26810.0,
+        "annual_revenue_usd": 6850.470690589252,
+        "objective_value": 6582.370690589251
+      }
+    }
+  ]
+}

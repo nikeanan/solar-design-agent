@@ -1,0 +1,28 @@
+{
+  "constraints": {
+    "load_n": 1000.0,
+    "max_deflection_mm": 2.0,
+    "yield_strength_pa": 150000000.0,
+    "youngs_modulus_pa": 69000000000.0,
+    "density_kg_m3": 2700.0,
+    "safety_factor": 2.0
+  },
+  "best": {
+    "design": {
+      "width_m": 0.03,
+      "thickness_m": 0.02,
+      "length_m": 0.1
+    },
+    "metrics": {
+      "stress_mpa": 50.0,
+      "deflection_mm": 0.24154589371980675,
+      "mass_kg": 0.16199999999999998,
+      "safety_factor": 3.0,
+      "allowable_stress_mpa": 75.0
+    },
+    "score": -0.16199999999999998
+  },
+  "feasible_count": 24,
+  "candidate_count": 135,
+  "disclaimer": "Preliminary beam-model sizing only; not structural certification."
+}

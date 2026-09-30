@@ -1,0 +1,19 @@
+{
+  "site": {
+    "latitude_deg": 28.6,
+    "longitude_deg": -81.4,
+    "days": 365
+  },
+  "weather_csv": "pvgis-tmy-28.6--81.4.csv",
+  "constraints": {
+    "objective": "npv",
+    "max_land_area_m2": 250,
+    "max_budget_usd": 30000,
+    "electricity_price_usd_per_kwh": 0.10,
+    "annual_om_fraction": 0.015,
+    "degradation_rate": 0.005,
+    "analysis_years": 25,
+    "discount_rate": 0.08
+  },
+  "report_json": "config-driven-report.json"
+}
